@@ -1,0 +1,23 @@
+{
+  "name": "losah-builder",
+  "version": "1.0.0",
+  "description": "Application web complète pour télécharger des vidéos, partager sur WhatsApp et partager des fichiers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "server:install": "cd server && npm install",
+    "client:install": "cd client && npm install",
+    "install:all": "npm install && npm run server:install && npm run client:install",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "test": "concurrently \"cd server && npm test\" \"cd client && npm test\""
+  },
+  "keywords": ["video-downloader", "whatsapp", "file-sharing", "react", "nodejs"],
+  "author": "Losah Builder Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
